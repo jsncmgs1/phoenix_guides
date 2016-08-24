@@ -69,8 +69,8 @@ Additionally, unlike some async tasks, we don't care about the result of the
 task, so we don't need to await the result.  We like to say we can "fire and
 forget" these types of tasks.
 
-Since the result of the new async process and the calling process aren't
-dependent on each other, we need to make sure that if something goes wrong in
+Since the result of the new async process and the calling process are
+independent of each other, we need to make sure if something goes wrong in
 our async task, it doesn't crash the calling process. To do this, we need a
 separate supervisor that can supervise our async process. We can use the
 `HelloPhoenix.TaskSupervisor` that we created earlier for this, as we will see
